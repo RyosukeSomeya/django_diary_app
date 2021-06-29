@@ -1,0 +1,54 @@
+{% load static %}
+
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+  <div id="wrapper">
+    <!-- Navigation-->
+    <nav class="navbar　navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a href="{% url 'diary:index' %}" class="navbar-brand">PRIVATE DIARY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" area-expanded="false"
+                area-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mr-auto">
+            <li class="navbar-item {% block active_inquiry %}{% endblock %}">
+              <a href="#" class="nav-link">INQUIRY</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Log in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% block header %}{% endblock %}
+
+    {% block contents %}{% endblock %}
+
+    <!--  Footer  -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-while small">Copyright &copy; Private Diary 2021</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
