@@ -169,3 +169,7 @@ DEFAULT_FROM_EMAIL = 'admin@example.com'
 
 # メディアファイル配信時のホスト以下のルートURL
 MEDIA_URL = '/media/'
+
+# バックアップバッチ用
+BACKUP_PATH = 'backup/'
+NUM_SAVED_BACKUP = 30
