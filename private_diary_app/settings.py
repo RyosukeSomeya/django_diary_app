@@ -52,7 +52,6 @@ LOGGING = {
                 '[%(levelname)s]',
                 '%(pathname)s(Line%(lineno)d)',
                 '%(message)s',
-                ALLOWED_HOSTS
             ])
         },
     }
