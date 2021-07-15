@@ -5,7 +5,6 @@ DEBUG = False
 
 # 許可するホスト名のリスト
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
-
 # 静的ファイルを配置する場所
 STATIC_ROOT = '/usr/share/nginx/html/static'
 MEDIA_ROOT = '/usr/share/nginx/html/media'
@@ -53,6 +52,7 @@ LOGGING = {
                 '[%(levelname)s]',
                 '%(pathname)s(Line%(lineno)d)',
                 '%(message)s',
+                ALLOWED_HOSTS
             ])
         },
     }
